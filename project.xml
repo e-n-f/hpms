@@ -1,0 +1,1918 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#000000">
+
+<Parameters>
+  <Parameter name="attribution"><![CDATA[<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
+  <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
+  <Parameter name="center">-73.905,40.7276,16</Parameter>
+  <Parameter name="format">png8:m=h</Parameter>
+  <Parameter name="maxzoom">22</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="name"><![CDATA[HPMS ARNOLD traffic volumes]]></Parameter>
+  <Parameter name="source"><![CDATA[mapbox:///mapbox.satellite,mapbox.mapbox-streets-v5,enf.46qx5hfr]]></Parameter>
+</Parameters>
+
+
+<Style name="mapbox_satellite_full" filter-mode="first" image-filters="gray">
+  <Rule>
+    <RasterSymbolizer opacity="0.3" />
+  </Rule>
+</Style>
+<Layer name="mapbox_satellite_full"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>mapbox_satellite_full</StyleName>  </Layer>
+
+<Layer name="mapbox_satellite_plus"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="mapbox_satellite_open"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="mapbox_satellite_watermask" filter-mode="first" image-filters="gray">
+  <Rule>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+<Layer name="mapbox_satellite_watermask"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>mapbox_satellite_watermask</StyleName>  </Layer>
+
+<Layer name="landuse"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="waterway"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="water"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="aeroway"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="barrier_line"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="building"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="landuse_overlay"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="tunnel" filter-mode="first" opacity="0.5">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke="#0000ff" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="2" stroke-dasharray="4, 1" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="1" stroke-dasharray="4, 1" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-dasharray="4, 1" stroke="#0000ff" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke="#0000ff" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke="#0000ff" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke="#0000ff" stroke-width="0.5" />
+  </Rule>
+</Style>
+<Layer name="tunnel"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tunnel</StyleName>  </Layer>
+
+<Style name="road" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="2" stroke-dasharray="4, 1" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="1" stroke-dasharray="4, 1" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-dasharray="4, 1" stroke="#0000ff" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke="#0000ff" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke="#0000ff" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke="#0000ff" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke="#0000ff" stroke-width="0.5" />
+  </Rule>
+</Style>
+<Layer name="road"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>road</StyleName>  </Layer>
+
+<Style name="bridge" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="2" stroke-dasharray="4, 1" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-width="1" stroke-dasharray="4, 1" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street_limited')</Filter>
+    <LineSymbolizer stroke-dasharray="4, 1" stroke="#0000ff" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'street')</Filter>
+    <LineSymbolizer stroke="#0000ff" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'main')</Filter>
+    <LineSymbolizer stroke="#0000ff" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([class] = 'motorway')</Filter>
+    <LineSymbolizer stroke="#0000ff" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke="#0000ff" stroke-width="0.5" />
+  </Rule>
+</Style>
+<Layer name="bridge"
+  group-by="layer"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>bridge</StyleName>  </Layer>
+
+<Layer name="admin"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="country_label_line"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="country_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="marine_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="state_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="place_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="water_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="poi_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="road_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="waterway_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Layer name="housenum_label"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="hpms" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="77.2289440000001" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="59.40688" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="45.6976" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="35.152" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="27.04" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="20.8" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="16" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="12.3076923076923" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="9.46745562130178" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="7.28265817023214" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="5.60204474633241" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="4.30926518948647" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="3.31481937652806" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="2.54986105886774" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="1.96143158374441" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="1.50879352595724" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="1.16061040458249" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="0.892777234294225" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>500000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 226274.169979695)</Filter>
+    <LineSymbolizer stroke-width="0.686751718687865" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="54.6091100062762" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="42.0070076971355" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="32.3130828439504" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="24.8562175722695" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="19.1201673632843" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="14.7078210486802" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="11.3137084989848" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="8.70285269152675" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="6.69450207040519" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="5.14961697723476" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="3.96124382864212" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="3.04711063741702" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="2.34393125955155" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="1.80302404580889" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="1.38694157369914" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="1.06687813361473" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="0.820675487395943" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="0.631288836458418" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>500000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 160000)</Filter>
+    <LineSymbolizer stroke-width="0.485606797275706" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="38.614472" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="29.70344" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="22.8488" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="17.576" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="13.52" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="10.4" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="8.00000000000001" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="6.15384615384616" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="4.73372781065089" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="3.64132908511607" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="2.80102237316621" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="2.15463259474324" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="1.65740968826403" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="1.27493052943387" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="0.980715791872206" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="0.75439676297862" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="0.580305202291246" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="0.446388617147112" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>500000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 113137.084989848)</Filter>
+    <LineSymbolizer stroke-width="0.343375859343933" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="27.3045550031381" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="21.0035038485678" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="16.1565414219752" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="12.4281087861348" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="9.56008368164213" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="7.3539105243401" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="5.65685424949238" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="4.35142634576337" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="3.34725103520259" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="2.57480848861738" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="1.98062191432106" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="1.52355531870851" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="1.17196562977578" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="0.901512022904443" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="0.693470786849572" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="0.533439066807363" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="0.410337743697971" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="0.315644418229209" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>500000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 80000.0000000001)</Filter>
+    <LineSymbolizer stroke-width="0.242803398637853" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="19.307236" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="14.85172" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="11.4244" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="8.78800000000001" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="6.76" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="5.2" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="3.07692307692308" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="2.36686390532545" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="1.82066454255803" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="1.4005111865831" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="1.07731629737162" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="0.828704844132014" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="0.637465264716934" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="0.490357895936103" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="0.37719838148931" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="0.290152601145623" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="0.223194308573556" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>500000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 56568.5424949238)</Filter>
+    <LineSymbolizer stroke-width="0.171687929671966" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="13.652277501569" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="10.5017519242839" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="8.0782707109876" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="6.21405439306738" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="4.78004184082106" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="3.67695526217005" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="2.82842712474619" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="2.17571317288169" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="1.6736255176013" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="1.28740424430869" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="0.990310957160531" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="0.761777659354254" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="0.585982814887888" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="0.450756011452221" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="0.346735393424786" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="0.266719533403681" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="0.205168871848986" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="0.157822209114604" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>500000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 40000)</Filter>
+    <LineSymbolizer stroke-width="0.121401699318926" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="9.653618" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="7.42586" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="5.7122" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="4.394" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="3.38" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="2.6" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="2" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="1.53846153846154" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="1.18343195266272" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="0.910332271279017" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="0.700255593291552" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="0.538658148685809" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="0.414352422066007" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="0.318732632358467" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="0.245178947968051" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="0.188599190744655" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="0.145076300572811" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="0.111597154286778" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>500000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 28284.2712474619)</Filter>
+    <LineSymbolizer stroke-width="0.0858439648359831" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="6.82613875078452" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="5.25087596214194" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="4.0391353554938" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="3.10702719653369" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="2.39002092041053" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="1.83847763108502" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="1.4142135623731" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="1.08785658644084" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="0.836812758800648" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="0.643702122154345" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="0.495155478580265" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="0.380888829677127" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="0.292991407443944" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="0.225378005726111" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="0.173367696712393" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="0.133359766701841" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="0.102584435924493" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="0.0789111045573022" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>500000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 20000)</Filter>
+    <LineSymbolizer stroke-width="0.0607008496594632" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="4.826809" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="3.71293" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="2.8561" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="2.197" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="1.69" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="1.3" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="0.769230769230769" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="0.591715976331361" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="0.455166135639509" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="0.350127796645776" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="0.269329074342904" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="0.207176211033003" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="0.159366316179233" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="0.122589473984026" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="0.0942995953723274" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="0.0725381502864057" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="0.055798577143389" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>500000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 14142.135623731)</Filter>
+    <LineSymbolizer stroke-width="0.0429219824179916" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="3.41306937539226" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="2.62543798107097" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="2.0195676777469" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="1.55351359826685" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="1.19501046020527" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="0.919238815542512" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="0.707106781186548" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="0.543928293220421" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="0.418406379400324" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="0.321851061077172" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="0.247577739290133" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="0.190444414838564" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="0.146495703721972" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="0.112689002863055" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="0.0866838483561964" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="0.0666798833509203" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="0.0512922179622464" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="0.0394555522786511" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>500000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 10000)</Filter>
+    <LineSymbolizer stroke-width="0.0303504248297316" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="2.4134045" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="1.856465" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="1.42805" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="1.0985" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="0.845" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="0.65" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="0.384615384615385" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="0.295857988165681" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="0.227583067819754" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="0.175063898322888" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="0.134664537171452" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="0.103588105516502" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="0.0796831580896167" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="0.0612947369920128" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="0.0471497976861637" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="0.0362690751432029" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="0.0278992885716945" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>500000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 7071.06781186548)</Filter>
+    <LineSymbolizer stroke-width="0.0214609912089958" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="1.70653468769613" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="1.31271899053548" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="1.00978383887345" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="0.776756799133423" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="0.597505230102633" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="0.459619407771256" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="0.353553390593274" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="0.271964146610211" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="0.209203189700162" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="0.160925530538586" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="0.123788869645066" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="0.0952222074192817" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="0.073247851860986" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="0.0563445014315277" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="0.0433419241780982" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="0.0333399416754601" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="0.0256461089811232" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="0.0197277761393255" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>500000000</MinScaleDenominator>
+    <Filter>([AADT_VN] &gt;= 5000)</Filter>
+    <LineSymbolizer stroke-width="0.0151752124148658" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="1.20670225" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.9282325" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.714025" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.54925" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.4225" stroke="#ffff00" stroke-linecap="round" />
+    <TextSymbolizer placement="line" face-name="Source Sans Pro Semibold" avoid-edges="true" size="12" minimum-distance="200" fill="#ffffff" halo-fill="#000000" halo-radius="2" ><![CDATA[[AADT_VN]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.325" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.25" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.192307692307692" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>400000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.14792899408284" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.113791533909877" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.0875319491614439" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.0673322685857261" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.0517940527582508" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.0398415790448083" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.0306473684960064" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.0235748988430819" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.0181345375716014" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.0139496442858473" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>500000000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0.0107304956044979" stroke="#ffff00" stroke-linecap="round" />
+  </Rule>
+</Style>
+<Layer name="hpms"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>hpms</StyleName>  </Layer>
+
+</Map>
